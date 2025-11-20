@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Image Gallery</h1>
+            <p class="subtitle">Beautiful images with filters</p>
+        </header>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="nature">Nature</button>
+            <button class="filter-btn" data-filter="city">City</button>
+            <button class="filter-btn" data-filter="animals">Animals</button>
+            <button class="filter-btn" data-filter="food">Food</button>
+        </div>
+
+        <div class="gallery" id="gallery">
+
+            <!-- Nature Images -->
+            <div class="gallery-item" data-category="nature">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop" alt="Mountain">
+                <div class="overlay"><span class="category-tag">Nature</span></div>
+            </div>
+
+            <div class="gallery-item" data-category="nature">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop" alt="Forest">
+                <div class="overlay"><span class="category-tag">Nature</span></div>
+            </div>
+
+            <div class="gallery-item" data-category="nature">
+                <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&h=600&fit=crop" alt="Ocean">
+                <div class="overlay"><span class="category-tag">Nature</span></div>
+            </div>
+
+            <!-- City Images -->
+            <div class="gallery-item" data-category="city">
+                <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&h=600&fit=crop" alt="City Skyline">
+                <div class="overlay"><span class="category-tag">City</span></div>
+            </div>
+
+            <div class="gallery-item" data-category="city">
+                <img src="https://images.unsplash.com/photo-1514565131-fce0801e5785?w=800&h=600&fit=crop" alt="Street">
+                <div class="overlay"><span class="category-tag">City</span></div>
+            </div>
+
+            <div class="gallery-item" data-category="city">
+                <img src="https://images.pexels.com/photos/1168940/pexels-photo-1168940.jpeg" alt="City Lights">
+                <div class="overlay"><span class="category-tag">City</span></div>
+            </div>
+
+            <!-- Animals Images -->
+            <div class="gallery-item" data-category="animals">
+                <img src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?w=800&h=600&fit=crop" alt="Wildlife">
+                <div class="overlay"><span class="category-tag">Animals</span></div>
+            </div>
+
+            <!-- FIXED HERE -->
+            <div class="gallery-item" data-category="animals">
+                <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=800&h=600&fit=crop" alt="Bird">
+                <div class="overlay"><span class="category-tag">Animals</span></div>
+            </div>
+
+            <div class="gallery-item" data-category="animals">
+                <img src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?w=800&h=600&fit=crop" alt="Animal">
+                <div class="overlay"><span class="category-tag">Animals</span></div>
+            </div>
+
+            <!-- Food Images -->
+            <div class="gallery-item" data-category="food">
+                <img src="https://images.pexels.com/photos/1051399/pexels-photo-1051399.jpeg" alt="Food">
+                <div class="overlay"><span class="category-tag">Food</span></div>
+            </div>
+
+            <div class="gallery-item" data-category="food">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYvf1U10ZGYpB7Lmb5Zzir1O_TkESoW2hcIw&s" alt="South Indian">
+                <div class="overlay"><span class="category-tag">Food</span></div>
+            </div>
+
+            <div class="gallery-item" data-category="food">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZVjaLBODwDcAurHoWU5QiISMlsVZyEQnufA&s" alt="North Indian">
+                <div class="overlay"><span class="category-tag">Food</span></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <button class="nav-btn prev-btn" id="prevBtn">&#10094;</button>
+        <button class="nav-btn next-btn" id="nextBtn">&#10095;</button>
+
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImage">
+            <div class="lightbox-info">
+                <p id="lightboxCaption"></p>
+                <span id="lightboxCounter"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
